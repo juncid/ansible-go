@@ -34,7 +34,7 @@
     - name: Build image if it's not already built.
       shell: |
         eval $(minikube docker-env)
-        docker build -t {{ image_name }} ../Dockerfile
+        docker build -t {{ image_name }} ../
       when: not image_hash.stdout
 
     # Create Kubernetes resources to run Hello Go.
