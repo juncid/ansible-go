@@ -1,5 +1,6 @@
 # Setting host
 - hosts: localhost
+  become: yes
   gather_facts: false
 
   tasks:
