@@ -1,6 +1,5 @@
 # Setting host
 - hosts: localhost
-  become: true
   gather_facts: false
 
 # Variables
@@ -72,6 +71,7 @@
         mode: 'u=rwx,go=rx'
 
     - name: Check Minikube's status.
+      become: yes
       become_user: minikube
       command: minikube status
       register: minikube_status
