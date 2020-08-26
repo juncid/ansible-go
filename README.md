@@ -1,5 +1,7 @@
 # ansible-go
 Using go with ansible and minikube WIP
+Basado en el siguiente articulo
+https://medium.com/@adilsonbna/ansible-k8s-for-the-laziest-person-part-2-a0fea80c490c
 
 El siguiente codigo busca automatizar la instalación de un entorno de minikube local
 para que un desarrollador pueda probar de forma rapida y comoda sus imagenes dockerizadas,
