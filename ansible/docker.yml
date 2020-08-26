@@ -27,15 +27,13 @@
 
   - name: Remove docker old version
     yum:
-      name: "{{ item }}"
+      name: [ 'docker',
+              'docker-common',
+              'container-selinux',
+              'docker-selinux',
+              'docker-engine',
+              'docker-engine-selinux']
       state: absent
-    with_items:
-      - docker
-      - docker-common
-      - container-selinux
-      - docker-selinux
-      - docker-engine
-      - docker-engine-selinux
 
   - name: Install docker
     yum:
