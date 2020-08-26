@@ -80,6 +80,7 @@
 
     # Otherwise will start minikube
     - name: Start Minikube if it's not running.
+      become: yes
       become_user: minikube
       command: minikube start --driver=docker
       when: "not minikube_status.stdout or 'Running' not in minikube_status.stdout"
