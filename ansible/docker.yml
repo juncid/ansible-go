@@ -48,24 +48,28 @@
       state: latest
 
   - name: Upgrade pip
-    pip3:
+    pip:
       name: pip
       extra_args: --upgrade
+      executable: pip3.6
 
   - name: Install docker-compose
     pip3:
       name: docker-compose
       state: latest
+      executable: pip3.6
 
   - name: Install Pip ansible
     pip:
       name: ansible
       state: latest
+      executable: pip3.6
 
   - name: Install Openshift
     pip:
       name: openshift
       state: latest
+      executable: pip3.6
 
   # Restart and enable Docker service
   - service:
