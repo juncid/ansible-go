@@ -56,7 +56,7 @@
       become: yes
       file:
         state: directory
-        owner: minikube
+        owner: root
         group: root
         mode: 'u=rwx,go=rx'
         dest: '{{ minikube_install_dir }}'
@@ -68,7 +68,7 @@
         remote_src: yes
         dest: '{{ minikube_install_path }}'
         force: yes
-        owner: minikube
+        owner: root
         group: root
         mode: 'u=rwx,go=rx'
 
