@@ -72,7 +72,6 @@
 
     - name: Check Minikube's status.
       become: yes
-      become_user: minikube
       command: minikube status
       register: minikube_status
       changed_when: false
@@ -81,7 +80,6 @@
     # Otherwise will start minikube
     - name: Start Minikube if it's not running.
       become: yes
-      become_user: minikube
       command: minikube start --driver=docker
       when: "not minikube_status.stdout or 'Running' not in minikube_status.stdout"
 
