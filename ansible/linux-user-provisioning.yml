@@ -11,4 +11,4 @@
       lineinfile:
         path: /etc/sudoers
         insertafter: '## Allow root to run any commands anywhere'
-          line: 'minikube    ALL=(ALL)       ALL'
+        line: 'minikube    ALL=(ALL)       ALL'
