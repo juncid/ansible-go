@@ -10,5 +10,5 @@
     - name: Create minikube user as sudoers
       lineinfile:
         path: /etc/sudoers
-        insertafter: '^## Allow root to run'
+        insertafter: '## Allow root to run any commands anywhere'
           line: 'minikube    ALL=(ALL)       ALL'
