@@ -57,6 +57,7 @@
       file:
         state: directory
         owner: minikube
+        group: root
         mode: 'u=rwx,go=rx'
         dest: '{{ minikube_install_dir }}'
 
@@ -68,6 +69,7 @@
         dest: '{{ minikube_install_path }}'
         force: yes
         owner: minikube
+        group: root
         mode: 'u=rwx,go=rx'
 
     - name: Check Minikube's status.
