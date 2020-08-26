@@ -6,9 +6,9 @@
 
   tasks:
   - name: install epel release
-      yum:
-        name: epel-release
-        state: latest
+    yum:
+      name: epel-release
+      state: latest
 
   - name: Docker Repository
     get_url:
