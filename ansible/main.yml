@@ -1,5 +1,6 @@
 # Setting host
 - hosts: localhost
+  become: yes
   gather_facts: false
 
 # Variables
@@ -71,7 +72,6 @@
         mode: 'u=rwx,go=rx'
 
     - name: Check Minikube's status.
-      become: yes
       command: minikube status
       register: minikube_status
       changed_when: false
@@ -79,7 +79,6 @@
 
     # Otherwise will start minikube
     - name: Start Minikube if it's not running.
-      become: yes
       command: minikube start --driver=docker
       when: "not minikube_status.stdout or 'Running' not in minikube_status.stdout"
 
