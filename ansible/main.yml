@@ -16,6 +16,7 @@
     minikube_redis_filename: 'minikube-{{ minikube_os }}-{{ minikube_architecture }}'
     minikube_download_filename: '{{ minikube_redis_filename }}-{{ minikube_version }}'
     minikube_download_dir: '/tmp/minikube'
+    minikube_version: '1.12.1'
 
 # Pre-tasks to validate if Minikube is intall and running
   pre_tasks:
