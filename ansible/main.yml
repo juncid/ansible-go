@@ -1,7 +1,6 @@
 # Setting host
 - hosts: localhost
   become: true
-  become_user: minikube
   gather_facts: false
 
 # Variables
