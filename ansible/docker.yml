@@ -48,12 +48,12 @@
       state: latest
 
   - name: Upgrade pip
-    pip:
-      name: pip3
+    pip3:
+      name: pip
       extra_args: --upgrade
 
   - name: Install docker-compose
-    pip:
+    pip3:
       name: docker-compose
       state: latest
 
